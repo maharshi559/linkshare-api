@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Blog App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/app.css">
+</head>
+<body ng-app="myApp" ng-controller="singlePost">
+
+	<h1>Blog post app</h1>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div ng-repeat="post in posts track by $index" class="container">
+			
+				<h4 ng-click="getSinglePost(post.ID)">
+					<a href="views/singlePost.html">{{post.title}}</a></h4>
+				<p>{{post.body}}</p>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+<script type="text/javascript" src="../js/singlePost.js"></script>
+
+</html>
